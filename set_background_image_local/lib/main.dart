@@ -29,8 +29,9 @@ class BackgroundImageDemo extends StatelessWidget {
                       image: DecorationImage(
                           fit: BoxFit.cover,
                           colorFilter: ColorFilter.mode(
-                              Colors.white.withAlpha(180), BlendMode.dstATop),
-                          image: const AssetImage('assets/images/beach.jpg'))),
+                              Colors.white.withAlpha(250), BlendMode.dstATop),
+                          image:
+                              const AssetImage('assets/images/hernan2.jpg'))),
                   child: const Center(
                       child: Text(
                     "Me gusta que me operen la nariz",
