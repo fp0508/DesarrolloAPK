@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:other_counter_app/screens/bonus_screen.dart';
 
 import 'package:other_counter_app/screens/home_screen.dart';
 
@@ -12,6 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Other Counter App',
-        home: HomeScreen());
+        home: BonusScreen());
   }
 }

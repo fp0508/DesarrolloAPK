@@ -1,12 +1,12 @@
 import 'package:animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
+class BonusScreen extends StatefulWidget {
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<BonusScreen> createState() => _BonusScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _BonusScreenState extends State<BonusScreen> {
   int counter = 0;
 
   @override
@@ -18,18 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
       ),
       body: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        const Text(
-          'Counter App',
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-        ),
-//        Text('$counter', style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
-        AnimatedFlipCounter(
-          duration: const Duration(milliseconds: 500),
-          value: counter,
-          textStyle: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
-        )
-      ])),
+          child: AnimatedFlipCounter(
+        duration: const Duration(milliseconds: 500),
+        prefix: "Level: ",
+        value: counter,
+        textStyle: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+      )),
       floatingActionButton: _buttons(),
     );
   }
