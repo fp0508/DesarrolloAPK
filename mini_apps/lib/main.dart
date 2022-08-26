@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mini_apps/screens/home_screen.dart';
+import 'package:mini_apps/screens/my_canine_age_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,14 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mini Apps',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      initialRoute: 'home',
+      routes: {
+        'home': (_) => HomeScreen(),
+        'my_canine_age': (_) => MyCanineAgeScreen()
+      },
     );
   }
 }

@@ -23,12 +23,13 @@ class _HomeScreenState extends State<HomeScreen> {
           'Counter App',
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
-//        Text('$counter', style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
-        AnimatedFlipCounter(
+        Text('$counter',
+            style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+/*        AnimatedFlipCounter(
           duration: const Duration(milliseconds: 500),
           value: counter,
           textStyle: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
-        )
+        )*/
       ])),
       floatingActionButton: _buttons(),
     );
