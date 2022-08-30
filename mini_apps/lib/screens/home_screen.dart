@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mini_apps/Widgets/custom_card_with_image.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -6,48 +7,28 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Widget Section'),
-          centerTitle: true,
-          backgroundColor: Colors.redAccent,
         ),
         body: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, 'my_canine_age');
-                },
-                child: Container(
-                  width: double.infinity,
-                  height: 275,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    elevation: 5,
-                    margin: EdgeInsets.zero,
-                    child: Column(
-                      children: [
-                        Hero(
-                          tag: 'my_canine_age_image',
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(20),
-                                  topRight: Radius.circular(20)),
-                              child: Image.asset(
-                                  'assets/images/ComputerDog.jpg',
-                                  width: double.infinity,
-                                  height: 225,
-                                  fit: BoxFit.cover)),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text('Mi edad Canina', style: TextStyle(fontSize: 20)),
-                      ],
-                    ),
-                  ),
-                ),
-              )
+              CustomCardWithImage(
+                routeName: 'my_canine_age',
+                cardText: 'Mi edad canina',
+                heroTag: 'my_canine_age_image',
+                image: 'assets/images/computerDog.jpg',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              CustomCardWithImage(
+                routeName: 'contacts_app',
+                cardText: 'Contacts App',
+                heroTag: 'contacts_app',
+                image:
+                    'https://c0.wallpaperflare.com/preview/1013/721/141/contact-details-smartphone-business-contact-us.jpg',
+                //isAsset: false,
+              ),
             ],
           ),
         ));

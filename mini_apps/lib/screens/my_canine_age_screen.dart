@@ -61,6 +61,9 @@ class _MyCanineAgeScreenState extends State<MyCanineAgeScreen> {
                 if (_showCanineAge) _showCanineAgeContent(),
                 MaterialButton(
                     shape: StadiumBorder(),
+                    //elevation: 10,
+                    hoverColor: Colors.brown[900],
+                    hoverElevation: 15,
                     minWidth: double.infinity,
                     color: Colors.brown,
                     child: Text('Calcular mi edad canina',
