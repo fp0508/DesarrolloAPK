@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('User Profile'),
+          centerTitle: true,
         ),
         body: Column(
           children: [
