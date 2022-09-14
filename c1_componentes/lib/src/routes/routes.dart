@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '../pages/alert_page.dart';
 import '../pages/avatar_page.dart';
+import '../pages/card_page.dart';
 import '../pages/home_page.dart';
 
 Map<String, WidgetBuilder> getApplicationRoutes() {
@@ -9,5 +10,6 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     '/': (context) => const HomePage(),
     'alert': (context) => const AlertPage(),
     'avatar': (context) => const AvatarPage(),
+    'card': (context) => const CardPage(),
   };
 }
