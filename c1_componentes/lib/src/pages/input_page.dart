@@ -12,24 +12,25 @@ class _InputPageState extends State<InputPage> {
   String _email = '';
   String _password = '';
   String _fecha = '';
-  final TextEditingController _inputFieldDateController = TextEditingController();
+  final TextEditingController _inputFieldDateController =
+      TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Inputs de texto'),
+        title: const Text('Inputs de texto'),
       ),
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         children: [
           _crearInput(),
-          Divider(),
+          const Divider(),
           _crearEmail(),
-          Divider(),
+          const Divider(),
           _crearPassword(),
-          Divider(),
+          const Divider(),
           _crearFecha(context),
-          Divider(),
+          const Divider(),
           _crearPersona(),
         ],
       ),
@@ -43,11 +44,11 @@ class _InputPageState extends State<InputPage> {
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
           counter: Text('Letras ${_nombre.length}'),
-          label: Text('Nombre y Apellido'),
+          label: const Text('Nombre y Apellido'),
           hintText: 'Por favor ingrese su nombre',
           helperText: 'Ingrese su nombre completo',
-          suffixIcon: Icon(Icons.accessibility),
-          icon: Icon(Icons.account_circle)),
+          suffixIcon: const Icon(Icons.accessibility),
+          icon: const Icon(Icons.account_circle)),
       onChanged: (value) {
         setState(() {
           _nombre = value;
@@ -68,11 +69,11 @@ class _InputPageState extends State<InputPage> {
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-          label: Text('email'),
+          label: const Text('email'),
           helperText: 'Ingrese su dirección de correo',
           hintText: 'email',
-          suffixIcon: Icon(Icons.alternate_email),
-          icon: Icon(Icons.email)),
+          suffixIcon: const Icon(Icons.alternate_email),
+          icon: const Icon(Icons.email)),
       onChanged: (value) {
         setState(() {
           _email = value;
@@ -87,11 +88,11 @@ class _InputPageState extends State<InputPage> {
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
           counter: Text('Letras ${_password.length}'),
-          label: Text('Password'),
+          label: const Text('Password'),
           hintText: 'Password',
           helperText: 'Ingrese su Password',
-          suffixIcon: Icon(Icons.lock_open),
-          icon: Icon(Icons.lock)),
+          suffixIcon: const Icon(Icons.lock_open),
+          icon: const Icon(Icons.lock)),
       onChanged: (value) {
         setState(() {
           _password = value;
@@ -107,11 +108,11 @@ class _InputPageState extends State<InputPage> {
       decoration: InputDecoration(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
           counter: Text('Letras ${_password.length}'),
-          label: Text('Fecha de Nacimiento'),
+          label: const Text('Fecha de Nacimiento'),
           hintText: 'Fecha de Nacimiento',
           helperText: 'Ingrese su Fecha de Nacimiento',
-          suffixIcon: Icon(Icons.calendar_view_month),
-          icon: Icon(Icons.calendar_today)),
+          suffixIcon: const Icon(Icons.calendar_view_month),
+          icon: const Icon(Icons.calendar_today)),
       onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
         _selectDate(context);
@@ -125,7 +126,7 @@ class _InputPageState extends State<InputPage> {
         initialDate: DateTime.now(),
         firstDate: DateTime(1960),
         lastDate: DateTime(2050));
-        
+
     if (picked != null) {
       setState(() {
         _fecha = picked.toString();
