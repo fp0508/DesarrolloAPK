@@ -12,6 +12,15 @@ class _InputPageState extends State<InputPage> {
   String _email = '';
   String _password = '';
   String _fecha = '';
+  String _opcionSeleccionada = 'Volar';
+  final List<String> _poderes = [
+    'Volar',
+    'Rayos X',
+    'Invisibilidad',
+    'Teletransportación',
+    'Telequinesis'
+  ];
+
   final TextEditingController _inputFieldDateController =
       TextEditingController();
   @override
@@ -30,6 +39,8 @@ class _InputPageState extends State<InputPage> {
           _crearPassword(),
           const Divider(),
           _crearFecha(context),
+          const Divider(),
+          _crearDropdown(),
           const Divider(),
           _crearPersona(),
         ],
@@ -61,6 +72,7 @@ class _InputPageState extends State<InputPage> {
     return ListTile(
       title: Text('Nombre: $_nombre'),
       subtitle: Text('email: $_email'),
+      trailing: Text(_opcionSeleccionada),
     );
   }
 
@@ -125,7 +137,8 @@ class _InputPageState extends State<InputPage> {
         context: context,
         initialDate: DateTime.now(),
         firstDate: DateTime(1960),
-        lastDate: DateTime(2050));
+        lastDate: DateTime(2050),
+        locale: Locale('es', 'ES'));
 
     if (picked != null) {
       setState(() {
@@ -133,5 +146,38 @@ class _InputPageState extends State<InputPage> {
         _inputFieldDateController.text = _fecha;
       });
     }
+  }
+
+  List<DropdownMenuItem<String>> getOpcionesDropdown() {
+    List<DropdownMenuItem<String>> lista = [];
+    for (var poder in _poderes) {
+      lista.add(DropdownMenuItem(
+        value: poder,
+        child: Text(poder),
+      ));
+    }
+    return lista;
+  }
+
+  _crearDropdown() {
+    return Row(
+      children: [
+        Icon(Icons.select_all),
+        SizedBox(
+          height: 30,
+          width: 20,
+        ),
+        Expanded(
+          child: DropdownButton(
+              value: _opcionSeleccionada,
+              items: getOpcionesDropdown(),
+              onChanged: (opt) {
+                setState(() {
+                  _opcionSeleccionada = opt!;
+                });
+              }),
+        ),
+      ],
+    );
   }
 }
