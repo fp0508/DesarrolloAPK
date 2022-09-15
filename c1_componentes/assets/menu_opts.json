@@ -17,6 +17,16 @@
             "texto": "Cards - Tarjetas"
         },
         {
+            "ruta" : "animatedContainer",
+            "icon" : "donut_large",
+            "texto": "Animated Container"
+        },
+        {
+            "ruta" : "inputs",
+            "icon" : "input",
+            "texto": "Inputs"
+        },
+        {
             "ruta" : "Novedades",
             "icon" : "newspaper",
             "texto": "Novedades"
