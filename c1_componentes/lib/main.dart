@@ -11,13 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: [
-        const Locale('en', 'US'),
-        const Locale('es', 'ES'),
+      localizationsDelegates: GlobalMaterialLocalizations.delegates,
+      //GlobalWidgetsLocalizations.delegate,
+
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('es', 'ES'),
       ],
       debugShowCheckedModeBanner: false,
       title: 'Componentes App',
