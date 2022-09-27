@@ -18,23 +18,34 @@ class MyApp extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(
+        body: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                      Colors.white.withAlpha(250), BlendMode.dstATop),
+                  image: const AssetImage('/images/hernan2.jpg'))),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
                   onPressed: () {
                     const Text('Gracias!');
                   },
-                  icon: const Icon(Icons.adjust)),
-              const SizedBox(
-                height: 100,
-              ),
-              const Text(
-                'Me gusta que me operen la nariz',
-                style: TextStyle(fontSize: 30),
-              ),
-            ],
+                  icon: Icon(Icons.adjust),
+                  iconSize: 50,
+                  color: Colors.red,
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                const Text(
+                  'Me gusta que me operen la nariz',
+                  style: TextStyle(fontSize: 30),
+                ),
+              ],
+            ),
           ),
         ),
       ),
