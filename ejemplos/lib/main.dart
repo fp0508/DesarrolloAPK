@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       theme: ThemeData(primarySwatch: Colors.amber),
       home: Scaffold(
-        backgroundColor: Colors.lime[50],
+        backgroundColor: Colors.lime[900],
         appBar: AppBar(
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -32,9 +32,22 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Número 1',
-                style: TextStyle(fontSize: 35),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  height: 180,
+                  width: double.infinity,
+                  //color: Colors.yellow,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.yellow,
+                      border: Border.all(width: 5, color: Colors.limeAccent)),
+                  child: const Text(
+                    'Número 1',
+                    style: TextStyle(fontSize: 35),
+                  ),
+                ),
               ),
               Container(
                 width: double.infinity,
@@ -51,7 +64,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               Container(
                 width: double.infinity,
