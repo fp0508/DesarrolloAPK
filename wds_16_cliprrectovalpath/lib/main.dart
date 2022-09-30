@@ -49,7 +49,8 @@ class MiPagina extends StatelessWidget {
           ),
         ),
       ],
-    ));
+    )
+    );
   }
 }
 
