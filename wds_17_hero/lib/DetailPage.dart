@@ -22,7 +22,10 @@ class DetailPage extends StatelessWidget {
               padding: EdgeInsets.all(30.0),
               child: Text(
                 'Lorem ipsum bla bla cosas para ocupar el campo de texto',
-                style: TextStyle(fontSize: 30),
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+                textAlign: TextAlign.center,
               ),
             )
           ],
