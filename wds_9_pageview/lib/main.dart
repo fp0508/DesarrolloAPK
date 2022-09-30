@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           body: Center(
         child: SizedBox(
           width: double.infinity,
-          height: 300,
+          height: 320,
           child: PageView(
             reverse: true,
             controller: PageController(viewportFraction: 0.20),
