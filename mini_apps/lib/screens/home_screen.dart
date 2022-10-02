@@ -16,7 +16,8 @@ class HomeScreen extends StatelessWidget {
                 routeName: 'my_canine_age',
                 cardText: 'Mi edad canina',
                 heroTag: 'my_canine_age_image',
-                image: 'assets/images/computerDog.jpg',
+                image:
+                    'https://s36700.pcdn.co/wp-content/uploads/2015/05/DavidZimmerman5.jpg.optimal.jpg',
               ),
               SizedBox(
                 height: 10,
