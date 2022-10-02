@@ -79,8 +79,8 @@ class ListItem extends StatelessWidget {
       ),
       onDismissed: (direction) {
         if (direction == DismissDirection.startToEnd) {
-          print('eliminar este elemento $index');
           onDeleteContact(index);
+          print('eliminar este elemento $index');
         }
       },
       confirmDismiss: (direction) async {
@@ -88,6 +88,7 @@ class ListItem extends StatelessWidget {
           onTogglePinned(index);
           return false;
         }
+        return true;
       },
       key: UniqueKey(),
       child: ListTile(
